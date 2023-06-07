@@ -108,15 +108,9 @@ header .slogan {
     font-size: 1.3rem;
     font-weight: 300;
     padding: 1rem;
-    /* box-sizing: border-box;
-    width: auto;*/
     transition: border-color .1s; 
     border: 1px solid #d9d9d9;
-    border-radius: .1875em;/* 
-    background: rgba(0,0,0,0);
-    box-shadow: none;
-    color: inherit; */
-    
+    border-radius: .1875em;    
 }
 
 .formulario input:focus,
@@ -188,8 +182,6 @@ header .slogan {
 .alerta.error {
     background-color: var(--blanco);
     color: #b91c1c;
-}
-.alerta.success {
 }
 
 .contenedor {
@@ -271,10 +263,7 @@ header .slogan {
     }
     .dos-columnas > div {
         width: 50%;
-    }
-    /* .dos-columnas :first-child {
-        margin-bottom: 0;
-    } */
+    }    
 }
 
 .contenedor-presupuesto .listado-gastos svg {
@@ -381,9 +370,6 @@ button:hover {
 }
 
 .filtros .campo {
-    /*display: flex;
-    align-items: center;
-    gap: 2rem;*/
     background-color: var(--blanco);
     border: 1px solid var(--gris-oscuro);
     color: var(--gris-oscuro);
@@ -437,6 +423,7 @@ background-color: #ccc;
 .listado-gastos .sombra {
     margin-bottom: 3rem;
     padding-bottom: 1rem;
+    width: 100%;
 }
 
 .listado-gastos h2 {
