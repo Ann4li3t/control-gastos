@@ -276,13 +276,13 @@ const ControlPresupuesto = ({
             <h1>Gastómetro</h1>
             <p className='slogan'>Controla tus finanzas, simplifica tus gastos.</p>
             <div className='control-gastos contenedor-presupuesto dos-columnas'>
-                <div>
-                <Chart 
-                    options={state.options} 
-                    series={state.series} 
-                    type="donut" 
-                    width={310} 
-                />          
+                <div className='chart-donut'>
+                    <Chart 
+                        options={state.options} 
+                        series={state.series} 
+                        type="donut" 
+                        width={310} 
+                    />          
                 </div>
 
                 <div className="contenido-presupuesto">

@@ -61,7 +61,6 @@ header.nuevoPresupuesto {
 header h1 {
     margin: 0;
     text-align: center;
-    /* text-transform: uppercase; */
     font-weight: 700;
     color: var(--azul);
 }
@@ -76,12 +75,6 @@ header .slogan {
     width: 37rem;
     margin: 0 auto;
     padding: 10rem 0;
-}
-@media (min-width: 768px) {
-    .formulario {
-        padding: 5rem 0;
-        width: 37rem;
-    }
 }
 
 .formulario .campo {
@@ -151,12 +144,6 @@ header .slogan {
     width: 56%;
 }
 
-@media (min-width: 768px) {
-    .formulario input[type="submit"] {
-        display: block;
-        padding: 1rem 5rem;
-    }
-}
 .formulario input[type="submit"]:hover {
     background-color: #88b0f0;
     border: 1px solid #88b0f0;
@@ -208,7 +195,9 @@ header .slogan {
 }
 
 .dos-columnas {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
 }
 
 .arrow_box {
@@ -255,26 +244,10 @@ header .slogan {
     letter-spacing: 1px;
 }
 
-@media (min-width: 768px) {
-    .dos-columnas {
-        flex-direction: row;
-        align-items: center;
-        gap: 4rem;
-    }
-    .dos-columnas > div {
-        width: 50%;
-    }    
-}
-
 .contenedor-presupuesto .listado-gastos svg {
     width: 25rem;
 }
 
-@media (min-width: 768px) {
-    .contenido-presupuesto p {
-        text-align: left;
-    }
-}
 .contenido-presupuesto p.negativo,
 .contenido-presupuesto p.negativo span {
     color: #E83151;
@@ -303,10 +276,14 @@ header .slogan {
     color: var(--blanco);
 }
 
+.dos-columnas > div {
+    width: 50%; 
+}
+
 .reset-app, .agregar-presupuesto {
     margin-top: 2rem;
     padding: 1rem;
-    width: 80%;
+    width: 45%;
     text-align: center;    
     font-size: 1.2rem;
     border-radius: 2rem;
@@ -482,6 +459,10 @@ background-color: #ccc;
     color: var(--gris-oscuro);
 }
 
+.descripcion-gasto span:last-child {
+    margin-right: 0;
+}
+
 .descripcion-gasto span,  .arrow span{
     align-items: center;
     display: inline-flex;    
@@ -521,7 +502,7 @@ background-color: #ccc;
 .arrow {
     display: flex;
     align-items: center;
-    gap: 33rem;
+    justify-content: space-between;
 }
 
 .arrow span svg {
@@ -619,8 +600,8 @@ background-color: #ccc;
 
 .formulario .btn-submit {
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    justify-content: center; 
+    align-items: center;
 }
 body .modal {
     overflow: hidden;
@@ -658,4 +639,164 @@ body .modal {
     align-items: center;
     font-size: 2.4rem;
     text-align: right;
+}
+
+@media (max-width: 500px) {
+    /* Estilos para dispositivos móviles pequeños */
+    .contenido-presupuesto .dos-columnas {
+        flex-direction: column;  
+        text-align: center;
+        align-items: center;      
+    }
+
+    .reset-app, .agregar-presupuesto {
+        width: 80%;
+    }
+
+    .modal input {
+        width: 100%;
+    }
+
+    .modal .formulario input[type="submit"] {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Estilos para dispositivos móviles pequeños */
+    header h1 {
+        font-size: 4rem;
+    }
+
+    .formulario {
+        width: 100%;
+        padding: 5rem 0;
+    }
+
+    .contenido-presupuesto {
+        margin-right: 0;
+        margin-top: 5rem;
+    }
+
+    .control-gastos {    
+        margin-right: 0;
+    }
+
+    .swal2-modal {
+        display: flex !important;
+        flex-direction: column;  
+        text-align: center;
+        align-items: center; 
+        width: 77%;
+        padding-bottom: 3rem;
+    }
+
+    .swal2-input {
+        width: 100%;
+        margin: 0;
+    }
+
+    div:where(.swal2-container) h2:where(.swal2-title) {
+        padding: 0;
+        font-weight: 700;
+        word-wrap: normal;
+    }
+
+    .swal2-cancel, .swal2-confirm {
+        width: 100%;
+    }
+
+    .swal2-cancel {
+        margin-top: -4rem;
+    }
+
+    .control-gastos.dos-columnas {
+        flex-direction: column;  
+        text-align: center;
+        align-items: center;      
+    }
+
+    .dos-columnas .contenido-presupuesto {
+        width: 80%; 
+    }  
+
+    .chart-donut {
+        width: 100% !important;        
+    }
+
+    .apexcharts-canvas {
+        margin: 0 auto;
+    }
+
+    .listado-gastos h2 {
+        text-align: center;
+    }
+
+    .modal .formulario {
+        margin-top: 9rem;
+        width: 75%;
+    }
+
+    .listado-gastos .sombra {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .gasto {
+        display: block;
+        margin-bottom: 3rem;
+    }
+
+    .contenido-gasto {
+        display: block;
+        text-align: center;
+    }
+
+    .descripcion-gasto {
+        margin-left: 0;
+    }
+
+    .descripcion-gasto p {
+        margin-top: 2.5rem;
+    }
+
+    .descripcion-gasto span, .arrow span {
+        font-size: 1.2rem;
+        letter-spacing: 0;
+      }
+
+      .descripcion-gasto span svg {
+        width: 2rem;
+        margin-right: 0.5rem;
+      }
+
+      .gasto .cantidad-gasto {
+        margin-top: 3rem;
+      }
+
+      .arrow {
+        display: none;
+      }
+
+}
+
+@media (min-width: 767px) and (max-width: 857px) {
+    /* Estilos para tabletas y pantallas más grandes */ 
+     .dos-columnas {
+        flex-direction: row;
+        align-items: center;        
+    }
+    .dos-columnas > div {
+        width: 50%; 
+    }
+    
+    .chart-donut {
+        margin-right: 2rem;
+        margin-left: -2rem;
+    }
+
+    .contenido-presupuesto {
+        margin-right: 0;
+        margin-left: 2rem;
+    }
 }
