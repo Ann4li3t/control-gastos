@@ -643,6 +643,27 @@ body .modal {
 
 @media (max-width: 500px) {
     /* Estilos para dispositivos móviles pequeños */
+    header .contenedor {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sombra {
+        padding: 2rem 2rem 8rem;
+    }
+
+    header h1 {
+        margin: 2rem 0;
+    }
+
+    .control-gastos {
+        margin-top: -3rem;
+    }
+
+    .contenido-presupuesto {
+        width: 100% !important;
+      }
+
     .contenido-presupuesto .dos-columnas {
         flex-direction: column;  
         text-align: center;
