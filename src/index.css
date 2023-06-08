@@ -674,6 +674,16 @@ body .modal {
         width: 80%;
     }
 
+    .swal2-modal {
+        width: 94% !important;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .swal2-title {
+        font-size: 2.5rem;
+    }
+
     .modal input {
         width: 100%;
     }
