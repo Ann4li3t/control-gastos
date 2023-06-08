@@ -26,7 +26,7 @@ const ControlPresupuesto = ({
 
     const [decimalValue, setDecimalValue] = useState('');
 
-   
+   const windowWidth = window.innerWidth
   
     useEffect(() => {
         const totalGastado = gastos.reduce( (total, gasto ) => gasto.cantidad + total, 0);
@@ -169,6 +169,8 @@ const ControlPresupuesto = ({
 
     const labels = ["Ahorro", "Comida", "Casa", "Varios", "Ocio", "Salud", "Susc", "Disponible"]
     
+    console.log(window.innerWidth)
+
     const state = {   
         animations: {
             enabled: true,
@@ -231,10 +233,11 @@ const ControlPresupuesto = ({
                             value: {
                                 show: true,
                                 fontSize: '5rem',
+                                fontSize: `${windowWidth < 480 ? '2.8rem' : '5rem' }`,
                                 fontFamily: 'Poppins',
                                 fontWeight: 700,
                                 color: '#333',
-                                offsetY: 25,
+                                offsetY: `${windowWidth < 480 ? 4 : 25 }`,
                                 formatter: function (val) {
                                     return val
                                 }
