@@ -169,8 +169,6 @@ const ControlPresupuesto = ({
 
     const labels = ["Ahorro", "Comida", "Casa", "Varios", "Ocio", "Salud", "Susc", "Disponible"]
     
-    console.log(window.innerWidth)
-
     const state = {   
         animations: {
             enabled: true,
